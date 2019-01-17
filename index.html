@@ -2,36 +2,85 @@
 <html>
   <head>
     <title>Chris O'Driscoll</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="indexstyle.css"> <!--linking stylesheet -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"> <!-- using different font -->
+
+     <!-- add js event date and timing when user lands on page -->
+    <script>
+            var today = new Date()
+            var curHr = today.getHours()
+            var currentTime = new Date(),
+                  hours = currentTime.getHours(),
+                  minutes = currentTime.getMinutes();
+
+
+            if (curHr < 12) {
+              document.write('Good morning!')
+            } else if (curHr < 18) {
+              document.write('Good afternoon!')
+            }else {
+              document.write('Good evening!')
+            }
+
+            if (minutes < 10) {
+            	 minutes = "0" + minutes;
+            }
+
+          	var suffix = "AM";
+          	if (hours >= 12) {
+              suffix = "PM";
+              hours = hours - 12;
+          	}
+          	if (hours == 0) {
+          	 hours = 12;
+          	}
+          	document.write("&nbsp" + "It is " + "&nbsp" + hours + ":" + minutes + " " + suffix)
+            var weekday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+            var d = new Date();
+            var month=new Array("January", "February", "March", "April", "May", "June",
+              "July", "August", "September", "October", "November", "December")
+            document.write("&nbsp" + "on" + "&nbsp" + weekday[d.getDay()]+ "," + "&nbsp" + month[d.getMonth()]);
+            document.write("&nbsp" + d.getDate());
+            document.write("," + "&nbsp");
+            document.write(d.getFullYear() + ".");
+      </script>
 
   </head>
 
   <body>
-
     <div class="wrapper">
-
-      <div class="left">
-        <img class="profile-picture" src="self.jpg" width="350" />
+      <div class="left"> <!-- left side of webpage -->
+        <img class="profile-picture" src="self.jpg" width="350" /> <!-- fixing pic -->
         <h1 class="name">I'm Chris O'Driscoll</h1>
         <h2 class="subtitle">Unique Software Developer</h2>
       </div>
 
-      <div class="right">
-        <p class="bio">
+
+      <div class="right"><!-- right side of the webpage -->
+        <p1 class="bio">
         This is a website that I created to show my skills in HTML, CSS, and Javascript.
         This was imagined, setup, and created from the ground up.  The photos, background,
         coloring, layout, and stylesheets were made to work together in this site.  From
         this page you can move to how to make your own website - basics of HTML and CSS.
         You can also move to different Javascript examples plus games that are added here
         and that can be added to your own created site.
-        </p>
+        </p1>
         <ul class="social-links">
           <h3 class="SL-description">Check out my Social Media, Linkedin, and Portfolio sites</h3>
           <li><a href="https://www.linkedin.com/in/christopher-odriscoll/">LinkedIn</a></li>
           <li><a href="https://www.facebook.com/chris.odriscoll.127">Facebook</a></li>
           <li><a href="https://www.codriscoll-uniquedeveloper.com/">Portfolio</a></li
         </ul>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <ul class="howto"> <!-- link to coding webpage -->
+        <li><a href="Coding.html">How I developed this website - UNDER CONSTRUCTION</a></li>
+        </ul>
       </div>
+
   </body>
+
 </html>
