@@ -1,52 +1,47 @@
-html {
-  overflow-y: scroll;
-}
+/*INDEXSTYE.CSS stylesheet*/
 
-
+/*profile pic style*/
 .profile-picture {
   width: 300px;
   border: 20px solid black;
   margin: 20px;
-  /*profile pic settings*/
 }
 
+
+/*background style*/
 html, body {
-  background-image: url("backgroundimg.jpg"); /*background settings*/
+  background-image: url("backgroundimg.jpg");
   background-position: center;
-
-
   height: 100%;
   margin: 0px;
   padding: 0px;
-
   font-family: 'Roboto', sans-serif;
   color: white;
 }
 
-.name {
-  /*font settings*/
 
+/*left side name and subtitle style*/
+.name {
   font-family: 'Roboto', sans-serif;
   font-size: 50px;
   text-shadow: 5px 5px 10px black
 }
 
 .subtitle {
-  /*font settings*/
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
   text-shadow: 5px 5px 10px black
 }
 
+
+/*full page style*/
 .wrapper {
-  /*create wrapper to make two columns for page*/
   display: flex;
   flex-direction: row;
   height: 100%;
 }
 
 .left, .right {
-  /*setting left and right column attributes*/
   margin: 0px;
   max-width: 50%;
   flex: 1;
@@ -66,17 +61,15 @@ html, body {
   align-items: center;
   justify-content: center;
   text-align: center;
-
-
 }
 
+
+/*right side style*/
 .bio {
-  /*right column bio setting font size*/
   font-size: 20px;
 }
 
 p {
-  /*right column again paragrap margins*/
   margin: 25px 100px 75px 50px;
 }
 
@@ -84,7 +77,6 @@ p {
     font-size: 20px;
 }
 
-/*social links settings*/
 .social-links {
   list-style: none;
   padding-left: 0px;
@@ -108,7 +100,6 @@ p {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-/*how to develop this site settings*/
 .howto {
   list-style: none;
   padding-left: 0px;
@@ -130,4 +121,45 @@ p {
 
 .howto a:hover {
   background-color: black;
+}
+
+
+/*javascipt date time top event style
+- set as a div element first -
+then scrolled when page opens*/
+.datetime {
+  color: white;
+  text-align: center;
+
+  /* side scrolling Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);
+ transform:translateX(100%);
+ /* Apply animation to this element */
+ -moz-animation: datetime 15s linear infinite;
+ -webkit-animation: datetime 15s linear infinite;
+ animation: datetime 15s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes datetime {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes datetime {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes datetime {
+ 0%   {
+ -moz-transform: translateX(100%); /* Firefox bug fix */
+ -webkit-transform: translateX(100%); /* Firefox bug fix */
+ transform: translateX(100%);
+ }
+ 100% {
+ -moz-transform: translateX(-100%); /* Firefox bug fix */
+ -webkit-transform: translateX(-100%); /* Firefox bug fix */
+ transform: translateX(-100%);
+ }
+}
+</style>
 }

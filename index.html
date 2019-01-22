@@ -1,25 +1,27 @@
 <!DOCTYPE html>
+<!--Author: Chris O'Driscoll -->
+
 <html>
   <head>
     <title>Chris O'Driscoll</title>
     <link rel="stylesheet" type="text/css" href="indexstyle.css"> <!--linking stylesheet -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"> <!-- using different font -->
 
-     <!-- add js event date and timing when user lands on page -->
-    <script>
+     <!-- add js event date and timing when user lands on page but set it in a div element to style easier-->
+     <div class="datetime">
+       <script type="text/javascript">
             var today = new Date()
             var curHr = today.getHours()
             var currentTime = new Date(),
                   hours = currentTime.getHours(),
                   minutes = currentTime.getMinutes();
 
-
             if (curHr < 12) {
-              document.write('Good morning!')
+              document.write("<span style=\"color:lightred;font-size: 2em; font-family:arial, helvetica, sans-serif;\">Good morning!<\/span>")
             } else if (curHr < 18) {
-              document.write('Good afternoon!')
+              document.write("<span style=\"color:lightgreen;font-size: 2em; font-family:arial, helvetica, sans-serif;\">Good afternoon!<\/span>")
             }else {
-              document.write('Good evening!')
+              document.write("<span style=\"color:lightpurple;font-size: 2em; font-family:arial, helvetica, sans-serif;\">Good afternoon!<\/span>")
             }
 
             if (minutes < 10) {
@@ -34,7 +36,7 @@
           	if (hours == 0) {
           	 hours = 12;
           	}
-          	document.write("&nbsp" + "It is " + "&nbsp" + hours + ":" + minutes + " " + suffix)
+          	document.write("&nbsp" + " It is " + "&nbsp" + hours + ":" + minutes + " " + suffix)
             var weekday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
             var d = new Date();
             var month=new Array("January", "February", "March", "April", "May", "June",
@@ -43,7 +45,8 @@
             document.write("&nbsp" + d.getDate());
             document.write("," + "&nbsp");
             document.write(d.getFullYear() + ".");
-      </script>
+        </script>
+      </div>
 
   </head>
 
@@ -77,7 +80,7 @@
         <br>
         <br>
         <ul class="howto"> <!-- link to coding webpage -->
-        <li><a href="Coding.html">How I developed this website - UNDER CONSTRUCTION</a></li>
+        <li><a href="howto.html">How I developed this website - UNDER CONSTRUCTION</a></li>
         </ul>
       </div>
 
